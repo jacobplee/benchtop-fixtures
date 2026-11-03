@@ -1,0 +1,2071 @@
+{
+ "presets": {
+  "breadboard_adapter": {
+   "name": "breadboard_adapter",
+   "verdict": "PASS",
+   "info": {
+    "part": "breadboard_adapter",
+    "size_mm": [
+     127.0,
+     101.6,
+     12.0
+    ],
+    "volume_cm3": 138.306,
+    "bed_z": -0.0,
+    "params": {
+     "system": "imperial",
+     "units": [
+      5,
+      4
+     ],
+     "thickness": 12.0,
+     "corner_r": 4.0,
+     "slot_fit": "normal",
+     "device_pattern": [
+      60.0,
+      40.0
+     ],
+     "device_screw": "M4",
+     "device_fit": "close",
+     "nut_traps": true,
+     "device_hole_d": null,
+     "top_chamfer": 1.0,
+     "bottom_chamfer": 0.4
+    },
+    "notes": [
+     "imperial: 1/4-20 slots, pitch 25.4 mm, travel 25.4 mm; device M4 close on 60.0 x 40.0 mm",
+     "M4 hex nut traps from below, 7.3 mm across flats, 3.6 mm deep"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 138.31 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 138306.13,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 138307.503,
+     "volume_rel_diff": 9.93e-06
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      127.0,
+      101.6,
+      12.0
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 5.15 mm >= 1.2 mm (33598 samples)",
+     "min_wall_required": 1.2,
+     "samples": 33598,
+     "missed": 0,
+     "min_mm": 5.15,
+     "p1_mm": 5.15,
+     "median_mm": 12.0,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      25.06,
+      43.0,
+      0.0
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "12 holes match the table (1/4-20 normal, M4 close)",
+     "holes": [
+      {
+       "label": "slot end (-50.80, -38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        -50.8,
+        -38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (-25.40, -38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        -25.4,
+        -38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (25.40, -38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        25.4,
+        -38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (50.80, -38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        50.8,
+        -38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (-50.80, 38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        -50.8,
+        38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (-25.40, 38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        -25.4,
+        38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (25.40, 38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        25.4,
+        38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "slot end (50.80, 38.10)",
+       "screw": "1/4-20",
+       "fit": "normal",
+       "center": [
+        50.8,
+        38.1,
+        6.0
+       ],
+       "expected_mm": 7.1437,
+       "measured_mm": 7.1437,
+       "ok": true
+      },
+      {
+       "label": "device (-30.0, -20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        -30.0,
+        -20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (-30.0, 20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        -30.0,
+        20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (30.0, -20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        30.0,
+        -20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (30.0, 20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        30.0,
+        20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "4 flat bridge(s) flagged, longest span 7.3 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        -29.98,
+        -20.01,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        30.02,
+        -20.0,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        -29.98,
+        19.99,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        30.02,
+        20.0,
+        3.6
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "breadboard_adapter.step",
+    "stl": "breadboard_adapter.stl"
+   },
+   "preset": {
+    "part": "breadboard_adapter",
+    "overrides": {}
+   }
+  },
+  "breadboard_adapter_metric": {
+   "name": "breadboard_adapter_metric",
+   "verdict": "PASS",
+   "info": {
+    "part": "breadboard_adapter",
+    "size_mm": [
+     125.0,
+     100.0,
+     12.0
+    ],
+    "volume_cm3": 134.423,
+    "bed_z": -0.0,
+    "params": {
+     "system": "metric",
+     "units": [
+      5,
+      4
+     ],
+     "thickness": 12.0,
+     "corner_r": 4.0,
+     "slot_fit": "normal",
+     "device_pattern": [
+      60.0,
+      40.0
+     ],
+     "device_screw": "M4",
+     "device_fit": "close",
+     "nut_traps": true,
+     "device_hole_d": null,
+     "top_chamfer": 1.0,
+     "bottom_chamfer": 0.4
+    },
+    "notes": [
+     "metric: M6 slots, pitch 25.0 mm, travel 25.0 mm; device M4 close on 60.0 x 40.0 mm",
+     "M4 hex nut traps from below, 7.3 mm across flats, 3.6 mm deep"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 134.42 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 134423.251,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 134424.517,
+     "volume_rel_diff": 9.42e-06
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      125.0,
+      100.0,
+      12.0
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 5.50 mm >= 1.2 mm (32787 samples)",
+     "min_wall_required": 1.2,
+     "samples": 32787,
+     "missed": 0,
+     "min_mm": 5.5,
+     "p1_mm": 5.5,
+     "median_mm": 12.0,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      34.39,
+      34.15,
+      5.5
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "12 holes match the table (M4 close, M6 normal)",
+     "holes": [
+      {
+       "label": "slot end (-50.00, -37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        -50.0,
+        -37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (-25.00, -37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        -25.0,
+        -37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (25.00, -37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        25.0,
+        -37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (50.00, -37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        50.0,
+        -37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (-50.00, 37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        -50.0,
+        37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (-25.00, 37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        -25.0,
+        37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (25.00, 37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        25.0,
+        37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "slot end (50.00, 37.50)",
+       "screw": "M6",
+       "fit": "normal",
+       "center": [
+        50.0,
+        37.5,
+        6.0
+       ],
+       "expected_mm": 6.6,
+       "measured_mm": 6.6,
+       "ok": true
+      },
+      {
+       "label": "device (-30.0, -20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        -30.0,
+        -20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (-30.0, 20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        -30.0,
+        20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (30.0, -20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        30.0,
+        -20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      },
+      {
+       "label": "device (30.0, 20.0)",
+       "screw": "M4",
+       "fit": "close",
+       "center": [
+        30.0,
+        20.0,
+        6.0
+       ],
+       "expected_mm": 4.3,
+       "measured_mm": 4.3,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "4 flat bridge(s) flagged, longest span 7.3 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        -29.98,
+        -20.01,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        30.02,
+        -20.0,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        -29.98,
+        19.99,
+        3.6
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 31.63,
+       "span_mm": 7.3,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        3.6,
+        3.6
+       ],
+       "centre": [
+        30.02,
+        20.0,
+        3.6
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "breadboard_adapter_metric.step",
+    "stl": "breadboard_adapter_metric.stl"
+   },
+   "preset": {
+    "part": "breadboard_adapter",
+    "overrides": {
+     "system": "metric"
+    }
+   }
+  },
+  "gridfinity_bin": {
+   "name": "gridfinity_bin",
+   "verdict": "PASS",
+   "info": {
+    "part": "gridfinity_bin",
+    "size_mm": [
+     83.5,
+     41.5,
+     24.551
+    ],
+    "volume_cm3": 27.838,
+    "bed_z": -0.0,
+    "params": {
+     "cells_x": 2,
+     "cells_y": 1,
+     "units": 3,
+     "wall": 1.2,
+     "lip": true,
+     "floor_fillet": null,
+     "pocket": null,
+     "pocket_size": [
+      30.0,
+      20.0
+     ],
+     "pocket_d": 20.0,
+     "pocket_depth": 10.0,
+     "pocket_r": 2.0,
+     "pocket_offset": [
+      0.0,
+      0.0
+     ],
+     "pocket_chamfer": 0.8
+    },
+    "notes": [
+     "outer 83.5 x 41.5 mm, body 21.0 mm + lip"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 27.84 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 27837.779,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 27837.642,
+     "volume_rel_diff": 4.93e-06
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      83.5,
+      41.5,
+      24.551
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 1.20 mm >= 1.2 mm (16689 samples)",
+     "min_wall_required": 1.2,
+     "samples": 16689,
+     "missed": 0,
+     "min_mm": 1.2,
+     "p1_mm": 1.2,
+     "median_mm": 2.988,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      7.98,
+      19.55,
+      18.38
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "no screw holes declared",
+     "holes": []
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "1 flat bridge(s) flagged, longest span 3.5 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 32.84,
+       "span_mm": 3.47,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        4.75,
+        4.75
+       ],
+       "centre": [
+        -0.0,
+        -0.0,
+        4.75
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "gridfinity_bin.step",
+    "stl": "gridfinity_bin.stl"
+   },
+   "preset": {
+    "part": "gridfinity_bin",
+    "overrides": {}
+   }
+  },
+  "gridfinity_bin_cylinder_pocket": {
+   "name": "gridfinity_bin_cylinder_pocket",
+   "verdict": "PASS",
+   "info": {
+    "part": "gridfinity_bin",
+    "size_mm": [
+     41.5,
+     41.5,
+     45.551
+    ],
+    "volume_cm3": 48.728,
+    "bed_z": -0.0,
+    "params": {
+     "cells_x": 1,
+     "cells_y": 1,
+     "units": 6,
+     "wall": 1.2,
+     "lip": true,
+     "floor_fillet": null,
+     "pocket": "cylinder",
+     "pocket_size": [
+      30.0,
+      20.0
+     ],
+     "pocket_d": 30.0,
+     "pocket_depth": 30.0,
+     "pocket_r": 2.0,
+     "pocket_offset": [
+      0.0,
+      0.0
+     ],
+     "pocket_chamfer": 0.8
+    },
+    "notes": [
+     "outer 41.5 x 41.5 mm, body 42.0 mm + lip"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 48.73 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 48728.358,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 48736.431,
+     "volume_rel_diff": 0.000166
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      41.5,
+      41.5,
+      45.551
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 1.45 mm >= 1.2 mm (13661 samples)",
+     "min_wall_required": 1.2,
+     "samples": 13661,
+     "missed": 0,
+     "min_mm": 1.451,
+     "p1_mm": 1.707,
+     "median_mm": 10.8,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -19.72,
+      -1.13,
+      45.37
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "no screw holes declared",
+     "holes": []
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "none past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "gridfinity_bin_cylinder_pocket.step",
+    "stl": "gridfinity_bin_cylinder_pocket.stl"
+   },
+   "preset": {
+    "part": "gridfinity_bin",
+    "overrides": {
+     "cells_x": 1,
+     "cells_y": 1,
+     "units": 6,
+     "pocket": "cylinder",
+     "pocket_d": 30.0,
+     "pocket_depth": 30.0
+    }
+   }
+  },
+  "gridfinity_bin_box_pocket": {
+   "name": "gridfinity_bin_box_pocket",
+   "verdict": "PASS",
+   "info": {
+    "part": "gridfinity_bin",
+    "size_mm": [
+     83.5,
+     41.5,
+     24.551
+    ],
+    "volume_cm3": 48.359,
+    "bed_z": -0.0,
+    "params": {
+     "cells_x": 2,
+     "cells_y": 1,
+     "units": 3,
+     "wall": 1.2,
+     "lip": true,
+     "floor_fillet": null,
+     "pocket": "box",
+     "pocket_size": [
+      70.0,
+      28.0
+     ],
+     "pocket_d": 20.0,
+     "pocket_depth": 10.0,
+     "pocket_r": 3.0,
+     "pocket_offset": [
+      0.0,
+      0.0
+     ],
+     "pocket_chamfer": 0.8
+    },
+    "notes": [
+     "outer 83.5 x 41.5 mm, body 21.0 mm + lip"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 48.36 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 48359.325,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 48358.954,
+     "volume_rel_diff": 7.67e-06
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      83.5,
+      41.5,
+      24.551
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 1.45 mm >= 1.2 mm (15231 samples)",
+     "min_wall_required": 1.2,
+     "samples": 15231,
+     "missed": 0,
+     "min_mm": 1.449,
+     "p1_mm": 1.655,
+     "median_mm": 9.8,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -10.28,
+      -20.75,
+      23.95
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "no screw holes declared",
+     "holes": []
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "1 flat bridge(s) flagged, longest span 3.5 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 32.84,
+       "span_mm": 3.47,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        4.75,
+        4.75
+       ],
+       "centre": [
+        -0.0,
+        -0.0,
+        4.75
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "gridfinity_bin_box_pocket.step",
+    "stl": "gridfinity_bin_box_pocket.stl"
+   },
+   "preset": {
+    "part": "gridfinity_bin",
+    "overrides": {
+     "pocket": "box",
+     "pocket_size": [
+      70.0,
+      28.0
+     ],
+     "pocket_r": 3.0,
+     "pocket_depth": 10.0
+    }
+   }
+  },
+  "tube_cradle": {
+   "name": "tube_cradle",
+   "verdict": "PASS",
+   "info": {
+    "part": "tube_cradle",
+    "size_mm": [
+     77.7,
+     98.932,
+     23.546
+    ],
+    "volume_cm3": 35.873,
+    "bed_z": -0.0,
+    "params": {
+     "barrels": [
+      [
+       14.0,
+       80.0
+      ],
+      [
+       17.0,
+       120.0
+      ],
+      [
+       29.5,
+       115.0
+      ]
+     ],
+     "clearance": 0.4,
+     "wrap_deg": 200.0,
+     "saddle_width": 10.0,
+     "web": 4.0,
+     "floor": 3.0,
+     "base_thickness": 3.0,
+     "support_at": 0.2232,
+     "mount_screw": "M4",
+     "mount_fit": "normal",
+     "bottom_chamfer": 0.4
+    },
+    "notes": [
+     "lane 1: OD 14 x 80 mm, bore 14.40, saddles at y = +/-22.1",
+     "lane 2: OD 17 x 120 mm, bore 17.40, saddles at y = +/-33.2",
+     "lane 3: OD 29.5 x 115 mm, bore 29.90, saddles at y = +/-31.8"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 35.87 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 35872.574,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 35877.501,
+     "volume_rel_diff": 0.000137
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      77.7,
+      98.932,
+      23.546
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 1.23 mm >= 1.2 mm (21243 samples)",
+     "min_wall_required": 1.2,
+     "samples": 21243,
+     "missed": 3,
+     "min_mm": 1.228,
+     "p1_mm": 3.0,
+     "median_mm": 3.0,
+     "thin_samples": 0,
+     "corner_samples": 43,
+     "min_at": [
+      -34.77,
+      -24.85,
+      14.27
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "4 holes match the table (M4 normal)",
+     "holes": [
+      {
+       "label": "mount",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        -31.85,
+        -43.841,
+        1.5
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      },
+      {
+       "label": "mount",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        -31.85,
+        43.841,
+        1.5
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      },
+      {
+       "label": "mount",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        31.85,
+        -43.841,
+        1.5
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      },
+      {
+       "label": "mount",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        31.85,
+        43.841,
+        1.5
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "none past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "tube_cradle.step",
+    "stl": "tube_cradle.stl"
+   },
+   "preset": {
+    "part": "tube_cradle",
+    "overrides": {}
+   }
+  },
+  "cable_clip": {
+   "name": "cable_clip",
+   "verdict": "PASS",
+   "info": {
+    "part": "cable_clip",
+    "size_mm": [
+     10.3,
+     10.0,
+     8.53
+    ],
+    "volume_cm3": 0.507,
+    "bed_z": 0.0,
+    "params": {
+     "od": 6.0,
+     "clearance": 0.3,
+     "wall": 2.0,
+     "width": 10.0,
+     "opening": 0.8,
+     "base": 2.0,
+     "style": "snap",
+     "screw": "M3",
+     "fit": "normal",
+     "tabs": 1,
+     "tab_thickness": 3.0,
+     "hole_d": null
+    },
+    "notes": [
+     "bore 6.30 mm for OD 6, opening 4.80 mm, lip tips 55.0 deg from top"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 0.51 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 507.371,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 507.387,
+     "volume_rel_diff": 3.17e-05
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      10.3,
+      10.0,
+      8.53
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 2.00 mm >= 1.2 mm (4000 samples)",
+     "min_wall_required": 1.2,
+     "samples": 4000,
+     "missed": 0,
+     "min_mm": 1.999,
+     "p1_mm": 2.0,
+     "median_mm": 2.641,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -2.55,
+      1.95,
+      7.0
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "no screw holes declared",
+     "holes": []
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "none past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "cable_clip.step",
+    "stl": "cable_clip.stl"
+   },
+   "preset": {
+    "part": "cable_clip",
+    "overrides": {}
+   }
+  },
+  "cable_clip_screw": {
+   "name": "cable_clip_screw",
+   "verdict": "PASS",
+   "info": {
+    "part": "cable_clip",
+    "size_mm": [
+     22.7,
+     10.0,
+     11.731
+    ],
+    "volume_cm3": 1.015,
+    "bed_z": 0.0,
+    "params": {
+     "od": 10.0,
+     "clearance": 0.3,
+     "wall": 2.0,
+     "width": 10.0,
+     "opening": 0.8,
+     "base": 2.0,
+     "style": "screw",
+     "screw": "M3",
+     "fit": "normal",
+     "tabs": 1,
+     "tab_thickness": 3.0,
+     "hole_d": null
+    },
+    "notes": [
+     "bore 10.30 mm for OD 10, opening 8.00 mm, lip tips 54.4 deg from top"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 1.01 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 1014.902,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 1015.02,
+     "volume_rel_diff": 0.000116
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      22.7,
+      10.0,
+      11.731
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 2.00 mm >= 1.2 mm (4000 samples)",
+     "min_wall_required": 1.2,
+     "samples": 4000,
+     "missed": 0,
+     "min_mm": 1.999,
+     "p1_mm": 2.0,
+     "median_mm": 3.0,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -5.78,
+      -0.56,
+      11.35
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "1 holes match the table (M3 normal)",
+     "holes": [
+      {
+       "label": "tab",
+       "screw": "M3",
+       "fit": "normal",
+       "center": [
+        11.35,
+        0.0,
+        1.5
+       ],
+       "expected_mm": 3.4,
+       "measured_mm": 3.4,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "none past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "cable_clip_screw.step",
+    "stl": "cable_clip_screw.stl"
+   },
+   "preset": {
+    "part": "cable_clip",
+    "overrides": {
+     "style": "screw",
+     "od": 10.0
+    }
+   }
+  },
+  "instrument_riser": {
+   "name": "instrument_riser",
+   "verdict": "PASS",
+   "info": {
+    "part": "instrument_riser",
+    "size_mm": [
+     50.0,
+     50.0,
+     25.0
+    ],
+    "volume_cm3": 39.899,
+    "bed_z": -0.0,
+    "params": {
+     "shape": "round",
+     "size": 50.0,
+     "height": 25.0,
+     "taper_deg": 8.0,
+     "corner_r": 6.0,
+     "cup_d": 28.0,
+     "cup_depth": 3.0,
+     "pads": 4,
+     "pad_d": 9.5,
+     "pad_thickness": 2.0,
+     "pad_protrusion": 0.8,
+     "pad_clearance": 0.4,
+     "screw": "M4",
+     "fit": "normal",
+     "top_chamfer": 1.0,
+     "bottom_chamfer": 0.4
+    },
+    "notes": [
+     "4 pad recesses 9.9 mm x 1.2 mm deep (pads stand 0.8 mm proud)"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 39.90 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 39898.985,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 39880.446,
+     "volume_rel_diff": 0.000465
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      50.0,
+      50.0,
+      25.0
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 2.99 mm >= 1.2 mm (7715 samples)",
+     "min_wall_required": 1.2,
+     "samples": 7715,
+     "missed": 0,
+     "min_mm": 2.99,
+     "p1_mm": 3.908,
+     "median_mm": 21.185,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -21.23,
+      13.2,
+      0.42
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "1 holes match the table (M4 normal)",
+     "holes": [
+      {
+       "label": "centre",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        0.0,
+        0.0,
+        12.5
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "5 flat bridge(s) flagged, longest span 9.9 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 34.35,
+       "span_mm": 8.0,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        4.4,
+        4.4
+       ],
+       "centre": [
+        -0.0,
+        0.0,
+        4.4
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        -11.72,
+        -11.85,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        11.76,
+        -11.77,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        -11.75,
+        11.74,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        11.76,
+        11.78,
+        1.2
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "instrument_riser.step",
+    "stl": "instrument_riser.stl"
+   },
+   "preset": {
+    "part": "instrument_riser",
+    "overrides": {}
+   }
+  },
+  "instrument_riser_square": {
+   "name": "instrument_riser_square",
+   "verdict": "PASS",
+   "info": {
+    "part": "instrument_riser",
+    "size_mm": [
+     60.0,
+     60.0,
+     40.0
+    ],
+    "volume_cm3": 115.513,
+    "bed_z": -0.0,
+    "params": {
+     "shape": "square",
+     "size": 60.0,
+     "height": 40.0,
+     "taper_deg": 8.0,
+     "corner_r": 6.0,
+     "cup_d": 28.0,
+     "cup_depth": 3.0,
+     "pads": 4,
+     "pad_d": 9.5,
+     "pad_thickness": 2.0,
+     "pad_protrusion": 0.8,
+     "pad_clearance": 0.4,
+     "screw": "M4",
+     "fit": "normal",
+     "top_chamfer": 1.0,
+     "bottom_chamfer": 0.4
+    },
+    "notes": [
+     "4 pad recesses 9.9 mm x 1.2 mm deep (pads stand 0.8 mm proud)"
+    ]
+   },
+   "checks": {
+    "solid": {
+     "status": "pass",
+     "summary": "1 solid, valid, watertight, 115.51 cm3",
+     "solids": 1,
+     "brep_valid": true,
+     "brep_volume": 115513.296,
+     "watertight": true,
+     "winding_consistent": true,
+     "mesh_volume": 115513.589,
+     "volume_rel_diff": 2.54e-06
+    },
+    "build_volume": {
+     "status": "pass",
+     "summary": "fits Prusa MK4, Bambu Lab X1C, Formlabs Form 3",
+     "size_mm": [
+      60.0,
+      60.0,
+      40.0
+     ],
+     "required": [
+      "prusa_mk4",
+      "bambu_x1c",
+      "form3"
+     ],
+     "printers": {
+      "prusa_mk4": {
+       "name": "Prusa MK4",
+       "volume": [
+        250.0,
+        210.0,
+        220.0
+       ],
+       "fits": true
+      },
+      "bambu_x1c": {
+       "name": "Bambu Lab X1C",
+       "volume": [
+        256.0,
+        256.0,
+        256.0
+       ],
+       "fits": true
+      },
+      "form3": {
+       "name": "Formlabs Form 3",
+       "volume": [
+        145.0,
+        145.0,
+        185.0
+       ],
+       "fits": true
+      }
+     }
+    },
+    "min_wall": {
+     "status": "pass",
+     "summary": "thinnest 2.76 mm >= 1.2 mm (15253 samples)",
+     "min_wall_required": 1.2,
+     "samples": 15253,
+     "missed": 0,
+     "min_mm": 2.761,
+     "p1_mm": 3.992,
+     "median_mm": 40.0,
+     "thin_samples": 0,
+     "corner_samples": 0,
+     "min_at": [
+      -27.43,
+      -28.92,
+      0.42
+     ]
+    },
+    "holes": {
+     "status": "pass",
+     "summary": "1 holes match the table (M4 normal)",
+     "holes": [
+      {
+       "label": "centre",
+       "screw": "M4",
+       "fit": "normal",
+       "center": [
+        0.0,
+        0.0,
+        20.0
+       ],
+       "expected_mm": 4.5,
+       "measured_mm": 4.5,
+       "ok": true
+      }
+     ]
+    },
+    "overhangs": {
+     "status": "pass",
+     "summary": "5 flat bridge(s) flagged, longest span 9.9 mm <= 10; nothing else past 45 deg",
+     "limit_deg": 45.0,
+     "max_bridge_mm": 10.0,
+     "bridges": [
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 34.35,
+       "span_mm": 8.0,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        4.4,
+        4.4
+       ],
+       "centre": [
+        -0.0,
+        0.0,
+        4.4
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        -21.57,
+        -21.68,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        21.73,
+        -21.68,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        -21.57,
+        21.62,
+        1.2
+       ]
+      },
+      {
+       "kind": "bridge",
+       "flat": true,
+       "area_mm2": 76.94,
+       "span_mm": 9.9,
+       "max_angle_deg": 90.0,
+       "z_mm": [
+        1.2,
+        1.2
+       ],
+       "centre": [
+        21.73,
+        21.62,
+        1.2
+       ]
+      }
+     ],
+     "needs_support": []
+    }
+   },
+   "files": {
+    "step": "instrument_riser_square.step",
+    "stl": "instrument_riser_square.stl"
+   },
+   "preset": {
+    "part": "instrument_riser",
+    "overrides": {
+     "shape": "square",
+     "size": 60.0,
+     "height": 40.0
+    }
+   }
+  }
+ },
+ "generator": "benchtop-fixtures 0.1.0"
+}

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchtop-fixtures"
+version = "0.1.0"
+description = "Parametric 3D-printable bench fixtures in build123d, with a printability checker"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Jacob Lee" }]
+requires-python = ">=3.10"
+dependencies = [
+    "build123d==0.11.1",
+    "trimesh>=4.4",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "shapely>=2.0",
+    "networkx>=3.0",
+    "rtree>=1.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = ["benchtop_fixtures", "benchtop_fixtures.parts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
