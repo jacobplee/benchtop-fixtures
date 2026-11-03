@@ -271,7 +271,7 @@ def _probes(tris: np.ndarray, max_points: int = 20000) -> np.ndarray:
 def overhang_regions(mesh: trimesh.Trimesh, faces, tri_face, tri_uv, limit_deg: float = OVERHANG_DEG,
                      max_bridge: float = MAX_BRIDGE):
     fn = mesh.face_normals
-    cand = np.nonzero(fn[:, 2] < -math.sin(math.radians(limit_deg - 5.0)))[0]
+    cand = np.nonzero(fn[:, 2] < -math.sin(math.radians(limit_deg - 10.0)))[0]   # facets within 10 deg get the exact normal
     if cand.size == 0:
         return []
     nz = np.zeros(len(fn))

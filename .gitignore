@@ -6,5 +6,5 @@ __pycache__/
 build/
 dist/
 renders/_work/
-renders/*_preview.png
+renders/*.png
 .DS_Store

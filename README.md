@@ -1,6 +1,6 @@
 # benchtop-fixtures
 
-![Six fixtures from the library, rendered in the same studio](renders/overview.png)
+![Six fixtures from the library, rendered in the same studio](renders/overview.jpg)
 
 Parametric, 3D-printable fixtures for the lab bench and workshop, written as Python with
 [build123d](https://github.com/gumyr/build123d). Each part is a function of a few plain
@@ -162,7 +162,7 @@ benchtop_fixtures/
   check.py          printability checker and command line
   build.py          builds, checks and exports every preset
 exports/            STEP + STL per preset, report.json
-renders/            one render per preset, overview.png
+renders/            one web-size render per preset, overview.jpg
 render/             Blender render script and the overview sheet
 tests/              pytest suite
 ACCEPTANCE.md       acceptance criteria, written before the code
@@ -171,8 +171,9 @@ ACCEPTANCE.md       acceptance criteria, written before the code
 ## Rebuilding the renders
 
 Renders need Blender (tested with 5.1) and Pillow. `./make.sh` rebuilds exports, runs the tests,
-renders every preset with Cycles and composes `renders/overview.png`. `./make.sh --no-render`
-stops after the tests.
+renders every preset with Cycles into `renders/_work/` (full-size masters, not committed), then
+writes the web-size JPEGs and `renders/overview.jpg`. `./make.sh --no-render` stops after the
+tests.
 
 ## License
 

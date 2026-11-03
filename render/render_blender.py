@@ -3,7 +3,8 @@
     blender --background --python render/render_blender.py -- [--names a,b,c] [--samples 128]
                                                               [--res 1600x1200] [--preview]
 
-Reads exports/<name>.stl, writes renders/<name>.png (renders/<name>_preview.png with --preview).
+Reads exports/<name>.stl, writes the full-size master renders/_work/<name>.png (<name>_preview.png
+with --preview). render/overview.py turns the masters into the web-size JPEGs that are committed.
 The scene is scaled to each part's bounding radius, so lights, sweep and framing look the same
 whether the part is a 10 mm clip or a 130 mm plate.
 """
@@ -17,7 +18,7 @@ from mathutils import Vector
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 EXP = os.path.join(ROOT, "exports")
-REN = os.path.join(ROOT, "renders")
+REN = os.path.join(ROOT, "renders", "_work")       # masters, not committed
 ARGV = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 MM = 0.001
 

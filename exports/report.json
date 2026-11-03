@@ -273,7 +273,7 @@
     },
     "overhangs": {
      "status": "pass",
-     "summary": "4 flat bridge(s) flagged, longest span 7.3 mm <= 10; nothing else past 45 deg",
+     "summary": "4 flat bridge(s) flagged, longest span 3.6 mm <= 10; nothing else past 45 deg",
      "limit_deg": 45.0,
      "max_bridge_mm": 10.0,
      "bridges": [
@@ -281,7 +281,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -297,7 +297,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -313,7 +313,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -329,7 +329,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -627,7 +627,7 @@
     },
     "overhangs": {
      "status": "pass",
-     "summary": "4 flat bridge(s) flagged, longest span 7.3 mm <= 10; nothing else past 45 deg",
+     "summary": "4 flat bridge(s) flagged, longest span 3.6 mm <= 10; nothing else past 45 deg",
      "limit_deg": 45.0,
      "max_bridge_mm": 10.0,
      "bridges": [
@@ -635,7 +635,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -651,7 +651,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -667,7 +667,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -683,7 +683,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 31.63,
-       "span_mm": 7.3,
+       "span_mm": 3.58,
        "max_angle_deg": 90.0,
        "z_mm": [
         3.6,
@@ -1749,7 +1749,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 34.35,
-       "span_mm": 8.0,
+       "span_mm": 3.5,
        "max_angle_deg": 90.0,
        "z_mm": [
         4.4,
@@ -1973,7 +1973,7 @@
        "kind": "bridge",
        "flat": true,
        "area_mm2": 34.35,
-       "span_mm": 8.0,
+       "span_mm": 3.5,
        "max_angle_deg": 90.0,
        "z_mm": [
         4.4,
