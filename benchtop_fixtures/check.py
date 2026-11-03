@@ -15,9 +15,11 @@ build_volume  the bounding box in the modeled orientation (bed at z = 0) fits ea
 min_wall      local wall thickness, sampled. Points are drawn uniformly by area over the surface
               (about one per mm^2, 4 000 to 60 000). From each point a ray is cast inward along the
               facet normal, starting just outside the surface, and intersected with the exact B-rep.
-              The distance from entry to exit is the local thickness. Any sample thinner than
-              min_wall - 0.05 mm fails the check. Acute knife edges therefore fail (correctly);
-              rounded tips pass when their radius is at least min_wall / 2.
+              The distance from entry to exit is the local thickness. A short ray counts as a wall
+              only when the face it leaves through is within 60 degrees of facing it (cosine >= 0.5):
+              parallel walls and knife edges sharper than 60 degrees count, the region next to a
+              blunt corner does not. Any wall sample thinner than min_wall - 0.05 mm fails the check.
+              Rounded tips pass when their radius is at least min_wall / 2.
 holes         every hole the part declares (screw, fit, axis) is looked up in the B-rep: the
               smallest concave cylinder coaxial with the declared axis within 0.01 mm is the
               clearance bore. Its diameter must equal the table value within 0.01 mm.
@@ -261,7 +263,8 @@ def _probes(tris: np.ndarray, max_points: int = 20000) -> np.ndarray:
     gx, gy = gx.ravel(), gy.ravel()
     inside = shapely.contains_xy(outline, gx, gy)
     edge = shapely.get_coordinates(shapely.segmentize(outline.boundary, h))
-    poles = [polylabel(Polygon(g.exterior), tolerance=0.005).coords[0] for g in getattr(outline, "geoms", [outline])]
+    poles = [polylabel(g, tolerance=0.005) for g in getattr(outline, "geoms", [outline])]
+    poles = [p.coords[0] for p in poles if outline.buffer(1e-6).contains(p)] or [tuple(edge[0])]
     return np.vstack([tris.reshape(-1, 3)[:, :2], edge, np.column_stack([gx[inside], gy[inside]]), np.asarray(poles)])
 
 

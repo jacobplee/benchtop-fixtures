@@ -22,6 +22,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=8.0"]
+render = ["pillow>=10.0"]
 
 [tool.setuptools]
 packages = ["benchtop_fixtures", "benchtop_fixtures.parts"]

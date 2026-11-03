@@ -92,14 +92,16 @@ def test_height_units_and_lip(units):
     assert fx.shape.bounding_box().max.Z == pytest.approx(top, abs=1e-6)
 
 
-def test_bins_stack():
+@pytest.mark.parametrize("lower", [dict(), dict(pocket="cylinder", pocket_d=20.0, pocket_depth=10.0)])
+def test_bins_stack(lower):
     """A second bin seats in the lip with zero interference where the profiles predict."""
-    a = make("gridfinity_bin", cells_x=1, cells_y=1, units=3)
+    a = make("gridfinity_bin", cells_x=1, cells_y=1, units=3, **lower)
+    b = make("gridfinity_bin", cells_x=1, cells_y=1, units=3)
     H = 3 * UNIT
     # foot bottom (35.6) meets the lip inner tip (41.5 - 2 x 2.6 = 36.3) on parallel 45 deg faces
     seat = H - ((TOP - 2 * 2.6) - BOTTOM) / 2          # 21 - 0.35
-    above = (Pos(0, 0, seat + 0.01) * a.shape) & a.shape
-    below = (Pos(0, 0, seat - 0.05) * a.shape) & a.shape
+    above = (Pos(0, 0, seat + 0.01) * b.shape) & a.shape
+    below = (Pos(0, 0, seat - 0.05) * b.shape) & a.shape
     assert above.volume < 1e-6
     assert below.volume > 0.05
 
